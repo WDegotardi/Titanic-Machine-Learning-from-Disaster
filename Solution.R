@@ -31,7 +31,7 @@ titanic_pred <- predict(titanic_model, test, type="class")
 
 #Format data frame for submission
 Submission <- data.frame(test$PassengerId, titanic_pred)
-names(Submission) <- c("PassengerID","Survival Prediction")
+names(Submission) <- c("PassengerId","Survived")
 
 #write csv for submission
 write_csv(Submission, file = "Submission.csv")
