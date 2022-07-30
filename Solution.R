@@ -20,8 +20,8 @@ train$Embarked <- train$Embarked %>%
   droplevels()
 
 #Create model
-titanic_model <- rpart(Survived ~ Pclass + Sex + Age + SibSp + Parch + Fare + 
-                         Embarked, data = train, method = "class")
+titanic_model <- rpart(Survived ~ Pclass + Sex + Age + SibSp + Parch + Fare
+                         , data = train, method = "class")
 
 #Plot model
 rpart.plot(titanic_model)
